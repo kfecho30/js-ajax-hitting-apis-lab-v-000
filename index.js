@@ -25,6 +25,6 @@ function getRepositories() {
   const user = document.getElementById('username-field').value;
   console.log(user)
   req.addEventListener("load", showRepositories);
-  req.open("GET", 'https://api.github.com/repos/octocat/' + user + '/commits')
+  req.open("GET", 'https://api.github.com/users/' + user + '/commits')
   req.send()
 }
