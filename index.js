@@ -15,6 +15,7 @@ function getCommits(el) {
 function showRepositories(event, data) {
   const repos = JSON.parse(this.responseText)
   const repoList = `<ul>${repos.map(r => '<li>' + r.name + ' - <a href="#" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a></li>').join('')}</ul>`
+  console.log(repoList)
   document.getElementById("repositories").innerHTML = repoList
 }
 
